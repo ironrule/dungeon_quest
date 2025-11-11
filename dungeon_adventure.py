@@ -188,7 +188,11 @@ def main():
                         end_game(player, treasures)
                         return
                 elif choice == "2":
-                    print("Moving to the next room...")
+                    if room == 5:
+                        print("You have escaped the dungeon!")
+                        end_game(player, treasures)
+                    else:
+                        print("Moving to the next room...")
                     break
                 elif choice == "3":
                     check_status(player)
